@@ -84,13 +84,13 @@ GRAMMAR_QUESTIONS = [
         "correct": "taken",
         "accepts": ["taken", "Taken"],
         "points": 0.5
-    },
+    }, # 5 puntos aqui
     
     # ============================================
-    # SECTION 2: Questions with EVER (7 points)
+    # SECTION 2: Questions with EVER (9 points)
     # ============================================
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a question in present perfect with 'ever': You / visit Spain",
         "correct": "Have you ever visited Spain?",
@@ -105,7 +105,7 @@ GRAMMAR_QUESTIONS = [
         "points": 1
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a question in present perfect with 'ever': He / see a shooting star",
         "correct": "Has he ever seen a shooting star?",
@@ -118,7 +118,7 @@ GRAMMAR_QUESTIONS = [
         "points": 1
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a question in present perfect with 'ever': You / break a bone",
         "correct": "Have you ever broken a bone?",
@@ -131,7 +131,7 @@ GRAMMAR_QUESTIONS = [
         "points": 1
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a question in present perfect with 'ever': We / speak to a celebrity",
         "correct": "Have we ever spoken to a celebrity?",
@@ -141,10 +141,10 @@ GRAMMAR_QUESTIONS = [
             "have we ever spoken to a celebrity?",
             "have we ever spoken to a celebrity"
         ],
-        "points": 1
+        "points": 1.5
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a sentence in present perfect with 'never': I / drive a truck",
         "correct": "I have never driven a truck.",
@@ -154,10 +154,10 @@ GRAMMAR_QUESTIONS = [
             "i have never driven a truck.",
             "i have never driven a truck"
         ],
-        "points": 1
+        "points": 1.5
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a sentence in present perfect with 'never': She / eat sushi",
         "correct": "She has never eaten sushi.",
@@ -167,10 +167,10 @@ GRAMMAR_QUESTIONS = [
             "she has never eaten sushi.",
             "she has never eaten sushi"
         ],
-        "points": 1
+        "points": 1.5
     },
     {
-        "section": "Present Perfect using Ever and Never (7pts)",
+        "section": "Present Perfect using Ever and Never (9pts)",
         "type": "write_sentence",
         "question": "Create a sentence in present perfect with 'never': They / see a ghost",
         "correct": "They have never seen a ghost.", 
@@ -180,7 +180,7 @@ GRAMMAR_QUESTIONS = [
             "they have never seen a ghost.",
             "they have never seen a ghost"
         ],
-        "points": 1
+        "points": 1.5
     },
     
     # ============================================
@@ -205,7 +205,7 @@ GRAMMAR_QUESTIONS = [
     {
         "section": "Present Perfect: FOR and SINCE (6pts)",
         "type": "fill_blank",
-        "question": "Edgar _____ (own) his own business ______ 2015. (Write: the COMPLETE sentence",
+        "question": "Edgar _____ (own) his own business ______ 2015. (Write: the COMPLETE sentence)",
         "correct": "Edgar has owned his own business since 2015",
         "accepts": [
             "Edgar has owned his own business since 2015",
@@ -434,7 +434,7 @@ GRAMMAR_QUESTIONS = [
             "This is her umbrella not his.",
             "This is her umbrella not his"
         ],
-        "points": 1
+        "points": 1.5
     },
     {
         "section": "Possessive Adjectives and Possessive Pronouns (5pts)",
@@ -449,7 +449,7 @@ GRAMMAR_QUESTIONS = [
             "These are their keys, we found them in your bag.",
             "These are their keys, we found them in your bag"
         ],
-        "points": 1
+        "points": 1.5
     },
 
     # ============================================
@@ -467,11 +467,6 @@ GRAMMAR_QUESTIONS = [
             "john is busy and i am, too",
             "John is busy and I am too.",
             "John is busy and I am too",
-            # Accept the literal completion with "busy, too"
-            "John is busy and I am busy, too.",
-            "John is busy and I am busy, too",
-            "john is busy and i am busy, too.",
-            "john is busy and i am busy, too"
         ],
         "points": 1
     },
@@ -487,11 +482,6 @@ GRAMMAR_QUESTIONS = [
             "maria is not at home and she is not, either",
             "Maria is not at home and she is not either.",
             "Maria is not at home and she is not either",
-            # Accept the literal completion
-            "Maria is not at home and she is not at home, either.",
-            "Maria is not at home and she is not at home, either",
-            "maria is not at home and she is not at home, either.",
-            "maria is not at home and she is not at home, either"
         ],
         "points": 1
     },
@@ -507,11 +497,6 @@ GRAMMAR_QUESTIONS = [
             "they don't like pizza and we don't, either",
             "They don't like pizza and we don't either.",
             "They don't like pizza and we don't either",
-            # Accept the literal completion
-            "They don't like pizza and we don't like pizza, either.",
-            "They don't like pizza and we don't like pizza, either",
-            "they don't like pizza and we don't like pizza, either.",
-            "they don't like pizza and we don't like pizza, either"
         ],
         "points": 1
     },
@@ -533,7 +518,7 @@ GRAMMAR_QUESTIONS = [
         "question": "What is the comparative form of 'convenient'?",
         "correct": "more convenient", 
         "accepts": ["more convenient", "More convenient", "More Convenient"],
-        "points": 1
+        "points": 1.5
     }, 
     {
         "section": "Comparing Adjectives (5 points)",
@@ -541,7 +526,7 @@ GRAMMAR_QUESTIONS = [
         "question": "What is the comparative form of 'Good'?",
         "correct": "Better",
         "accepts": ["Better", "better"],
-        "points": 1
+        "points": 1.5
     }, 
     {
         "section": "Comparing Adjectives (5 points)",
@@ -561,10 +546,10 @@ GRAMMAR_QUESTIONS = [
     },
     
     # ============================================
-    # SECTION 9: Comparing with as ... as (4 points)
+    # SECTION 9: Comparing with as ... as (5 points) - INCREASED FROM 4
     # ============================================
     {
-        "section": "Comparing with as ... as - Write COMPLETE sentences (4 points)",
+        "section": "Comparing with as ... as - Write COMPLETE sentences (5 points)",
         "type": "write_sentence",
         "question": "Complete the sentence using as ... as: \n\n 'This car is / that car (fast)'",
         "correct": "This car is as fast as that car.",
@@ -574,10 +559,10 @@ GRAMMAR_QUESTIONS = [
             "this car is as fast as that car.",
             "this car is as fast as that car"
         ],
-        "points": 1
+        "points": 1.5
     }, 
     {
-        "section": "Comparing with as ... as - Write COMPLETE sentences (4 points)",
+        "section": "Comparing with as ... as - Write COMPLETE sentences (5 points)",
         "type": "write_sentence",
         "question": "Complete the sentence using as ... as: \n\n 'Customer service at hello.com / at world.com (not good)'",
         "correct": "Customer service at hello.com is not as good as at world.com.",
@@ -586,16 +571,15 @@ GRAMMAR_QUESTIONS = [
             "Customer service at hello.com is not as good as at world.com",
             "customer service at hello.com is not as good as at world.com.",
             "customer service at hello.com is not as good as at world.com",
-            # Also accept "it is at" variation
             "Customer service at hello.com is not as good as it is at world.com.",
             "Customer service at hello.com is not as good as it is at world.com",
             "customer service at hello.com is not as good as it is at world.com.",
             "customer service at hello.com is not as good as it is at world.com"
         ],
-        "points": 1
+        "points": 1.5
     }, 
     {
-        "section": "Comparing with as ... as - Write COMPLETE sentences (4 points)",
+        "section": "Comparing with as ... as - Write COMPLETE sentences (5 points)",
         "type": "write_sentence",
         "question": "Complete the sentence using as ... as: \n\n 'Shopping on aro.com / it is on acb.com (easy)'",
         "correct": "Shopping on aro.com is as easy as it is on acb.com.",
@@ -604,21 +588,19 @@ GRAMMAR_QUESTIONS = [
             "Shopping on aro.com is as easy as it is on acb.com",
             "shopping on aro.com is as easy as it is on acb.com.",
             "shopping on aro.com is as easy as it is on acb.com",
-            # Accept without "it is"
             "Shopping on aro.com is as easy as on acb.com.",
             "Shopping on aro.com is as easy as on acb.com",
             "shopping on aro.com is as easy as on acb.com.",
             "shopping on aro.com is as easy as on acb.com",
-            # Accept "acb.com" without "on"
             "Shopping on aro.com is as easy as acb.com.",
             "Shopping on aro.com is as easy as acb.com",
             "shopping on aro.com is as easy as acb.com.",
             "shopping on aro.com is as easy as acb.com"
         ],
-        "points": 1
+        "points": 1.5
     }, 
     {
-        "section": "Comparing with as ... as - Write COMPLETE sentences (4 points)",
+        "section": "Comparing with as ... as - Write COMPLETE sentences (5 points)",
         "type": "write_sentence",
         "question": "Complete the sentence using as ... as: \n\n 'Prices at La Torre / they are at Maxi (not high)'",
         "correct": "Prices at La Torre are not as high as they are at Maxi.",
@@ -633,22 +615,24 @@ GRAMMAR_QUESTIONS = [
             "Prices at la Torre are not as high as they are at Maxi",
             "prices at la torre are not as high as they are at maxi.",
             "prices at la torre are not as high as they are at maxi",
-            # Accept without "they are"
             "Prices at La Torre are not as high as at Maxi.",
             "Prices at La Torre are not as high as at Maxi",
             "prices at la torre are not as high as at maxi.",
             "prices at la torre are not as high as at maxi"
         ],
-        "points": 1
+        "points": 1.5
     }
 ]
 
 def calculate_grammar_score_internal():
     """
     Calcula el score de grammar interno
+    SIEMPRE cuenta TODAS las preguntas (52 puntos total)
     """
     correct_points = 0
-    total_graded_points = 0
+    
+    # Calcular puntos totales reales sumando todos los puntos de las preguntas
+    total_possible_points = sum(q['points'] for q in GRAMMAR_QUESTIONS)
     
     for idx, q in enumerate(GRAMMAR_QUESTIONS):
         if idx in st.session_state.grammar_responses:
@@ -656,27 +640,26 @@ def calculate_grammar_score_internal():
             
             # Multiple choice
             if q['type'] == 'multiple_choice':
-                total_graded_points += q['points']
                 if user_answer == q['correct']:
                     correct_points += q['points']
             
             # Fill in the blank
             elif q['type'] == 'fill_blank':
-                total_graded_points += q['points']
-                if user_answer.lower() in [ans.lower() for ans in q['accepts']]:
+                # Case-insensitive comparison
+                if user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]:
                     correct_points += q['points']
             
             # Write sentence
             elif q['type'] == 'write_sentence':
-                total_graded_points += q['points']
-                if user_answer.lower() in [ans.lower() for ans in q['accepts']]:
+                # Case-insensitive comparison
+                if user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]:
                     correct_points += q['points']
     
-    return correct_points, total_graded_points
+    return correct_points, total_possible_points
 
 def show_grammar():
-    st.markdown("### GRAMMAR SECTION (52 points)")
-    st.caption("Answer all questions carefully. Total: 52 points")
+    st.markdown("### GRAMMAR SECTION (50 points)")
+    st.caption("Answer all questions carefully. Total: 50 points")
     
     # Inicializar respuestas si no existen
     if 'grammar_responses' not in st.session_state:
@@ -696,13 +679,16 @@ def show_grammar():
         
         # TIPO 1: Multiple Choice
         if q['type'] == 'multiple_choice':
+            # Get current answer or default to first option
+            current_answer = st.session_state.grammar_responses.get(idx, q['options'][0])
+            if current_answer not in q['options']:
+                current_answer = q['options'][0]
+            
             answer = st.radio(
                 "Select your answer:",
                 options=q['options'],
                 key=f"grammar_q_{idx}",
-                index=q['options'].index(st.session_state.grammar_responses.get(idx)) 
-                      if idx in st.session_state.grammar_responses and st.session_state.grammar_responses.get(idx) in q['options']
-                      else 0
+                index=q['options'].index(current_answer)
             )
             st.session_state.grammar_responses[idx] = answer
         
@@ -741,49 +727,73 @@ def show_grammar():
     
     st.divider()
     
-    # Calcular puntaje usando la función interna
-    correct_points, total_graded_points = calculate_grammar_score_internal()
+    # CRITICAL: Calcular y guardar el puntaje INMEDIATAMENTE después de cada cambio
+    correct_points, total_possible_points = calculate_grammar_score_internal()
     
-    # Guardar puntaje en session state INMEDIATAMENTE
+    # Guardar en session state
     st.session_state.grammar_score = correct_points
-    st.session_state.grammar_total = total_graded_points
+    st.session_state.grammar_total = total_possible_points
     
-    # Formatear respuestas para el email
-    grammar_text = ""
+    # ============================================
+    # GENERAR EL TEXTO COMPLETO PARA EL EMAIL
+    # ============================================
+    grammar_text = "GRAMMAR SECTION - DETAILED ANSWERS\n"
+    grammar_text += "="*80 + "\n\n"
+    
     current_section_text = None
     
     for idx, q in enumerate(GRAMMAR_QUESTIONS):
         # Agregar encabezado de sección
         if q.get("section") != current_section_text:
             current_section_text = q.get("section")
-            grammar_text += f"\n{'='*60}\n{current_section_text}\n{'='*60}\n"
+            grammar_text += "\n" + "="*60 + "\n"
+            grammar_text += current_section_text + "\n"
+            grammar_text += "="*60 + "\n"
         
+        # Obtener respuesta del usuario
         user_answer = st.session_state.grammar_responses.get(idx, "No answer")
+        
+        # Agregar pregunta y respuesta
         grammar_text += f"\nQ{idx + 1}. ({q['points']} pts) {q['question']}\n"
         grammar_text += f"Student answer: {user_answer}\n"
         
-        # Agregar corrección para todas las preguntas
+        # Determinar si está correcta y agregar corrección
+        is_correct = False
+        
         if q['type'] == 'multiple_choice':
             is_correct = user_answer == q['correct']
             grammar_text += f"Correct answer: {q['correct']} {'✓' if is_correct else '✗'}\n"
             grammar_text += f"Points earned: {q['points'] if is_correct else 0}/{q['points']}\n"
+        
         elif q['type'] == 'fill_blank':
-            is_correct = user_answer.lower() in [ans.lower() for ans in q['accepts']]
+            is_correct = user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]
             grammar_text += f"Correct answer: {q['correct']} {'✓' if is_correct else '✗'}\n"
             grammar_text += f"Points earned: {q['points'] if is_correct else 0}/{q['points']}\n"
+        
         elif q['type'] == 'write_sentence':
-            is_correct = user_answer.lower() in [ans.lower() for ans in q['accepts']]
+            is_correct = user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]
             word_count = len(user_answer.split()) if user_answer else 0
             grammar_text += f"Correct answer: {q['correct']} {'✓' if is_correct else '✗'}\n"
             grammar_text += f"Word count: {word_count}\n"
             grammar_text += f"Points earned: {q['points'] if is_correct else 0}/{q['points']}\n"
     
-    grammar_text += f"\n{'='*60}\n"
-    grammar_text += f"AUTO-GRADED SCORE: {correct_points}/{total_graded_points} points\n"
+    # Agregar resumen final
+    grammar_text += "\n" + "="*60 + "\n"
+    grammar_text += f"AUTO-GRADED SCORE: {correct_points}/{total_possible_points} points\n"
     grammar_text += f"TOTAL POSSIBLE POINTS: 52\n"
-    grammar_text += f"PERCENTAGE: {(correct_points/total_graded_points*100) if total_graded_points > 0 else 0:.1f}%\n"
+    percentage = (correct_points/total_possible_points*100) if total_possible_points > 0 else 0
+    grammar_text += f"PERCENTAGE: {percentage:.1f}%\n"
+    grammar_text += "="*60 + "\n"
     
+    # GUARDAR EN SESSION STATE - ESTO ES CRÍTICO
     st.session_state.grammar_answers = grammar_text
+    
+    # Debug: Verificar que se guardó correctamente
+    print(f"\n{'='*50}")
+    print(f"GRAMMAR ANSWERS LENGTH: {len(grammar_text)} characters")
+    print(f"FIRST 200 CHARS: {grammar_text[:200]}")
+    print(f"LAST 200 CHARS: {grammar_text[-200:]}")
+    print(f"{'='*50}\n")
     
     # Botones de navegación
     col1, col2, col3 = st.columns([1, 1, 1])

@@ -5,14 +5,16 @@ from tab_tracker import reset_tab_counter, get_tab_count
 def calculate_grammar_score():
     """
     Recalcula el score de grammar basado en las respuestas almacenadas
+    Calcula el total dinámicamente sumando todos los puntos
     """
     from grammar import GRAMMAR_QUESTIONS
     
     correct_points = 0
-    total_graded_points = 0
+    # Calcular total sumando todos los puntos de las preguntas
+    total_possible_points = sum(q['points'] for q in GRAMMAR_QUESTIONS)
     
     if 'grammar_responses' not in st.session_state:
-        return 0, 0
+        return 0, total_possible_points
     
     for idx, q in enumerate(GRAMMAR_QUESTIONS):
         if idx in st.session_state.grammar_responses:
@@ -20,65 +22,62 @@ def calculate_grammar_score():
             
             # Multiple choice
             if q['type'] == 'multiple_choice':
-                total_graded_points += q['points']
                 if user_answer == q['correct']:
                     correct_points += q['points']
             
             # Fill in the blank
             elif q['type'] == 'fill_blank':
-                total_graded_points += q['points']
-                if user_answer.lower() in [ans.lower() for ans in q['accepts']]:
+                if user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]:
                     correct_points += q['points']
             
             # Write sentence
             elif q['type'] == 'write_sentence':
-                total_graded_points += q['points']
-                if user_answer.lower() in [ans.lower() for ans in q['accepts']]:
+                if user_answer.strip().lower() in [ans.lower() for ans in q['accepts']]:
                     correct_points += q['points']
     
-    return correct_points, total_graded_points
+    return correct_points, total_possible_points
 
 def calculate_reading_score():
     """
     Recalcula el score de reading basado en las respuestas almacenadas
+    SIEMPRE retorna 16 como total posible
     """
     from reading import READING_QUESTIONS
     
     correct_points = 0
-    total_points = 0
+    total_possible_points = 16  # HARDCODED: Total de puntos posibles
     
     if 'reading_responses' not in st.session_state:
-        return 0, 0
+        return 0, total_possible_points
     
     for idx, q in enumerate(READING_QUESTIONS):
-        total_points += q['points']
         if idx in st.session_state.reading_responses:
             user_answer = st.session_state.reading_responses[idx]
             if user_answer == q['correct']:
                 correct_points += q['points']
     
-    return correct_points, total_points
+    return correct_points, total_possible_points
 
 def calculate_listening_score():
     """
     Recalcula el score de listening basado en las respuestas almacenadas
+    SIEMPRE retorna 17 como total posible
     """
     from listening import LISTENING_QUESTIONS
     
     correct_points = 0
-    total_points = 0
+    total_possible_points = 17  # HARDCODED: Total de puntos posibles
     
     if 'listening_responses' not in st.session_state:
-        return 0, 0
+        return 0, total_possible_points
     
     for idx, q in enumerate(LISTENING_QUESTIONS):
-        total_points += q['points']
         if idx in st.session_state.listening_responses:
             user_answer = st.session_state.listening_responses[idx]
             if user_answer == q['correct']:
                 correct_points += q['points']
     
-    return correct_points, total_points
+    return correct_points, total_possible_points
 
 def show_review():
     st.markdown("### 📋 Review Your Answers")
@@ -326,7 +325,7 @@ def show_review():
                 
                 try:
                     with st.spinner("📤 Submitting your assessment..."):
-                        # Send to Google Sheets
+                        # Send to Google Sheets with ALL scores
                         enviar_a_sheets(
                             st.session_state.student_name,
                             st.session_state.student_email,
@@ -335,7 +334,13 @@ def show_review():
                             st.session_state.grammar_answers,
                             st.session_state.reading_answers,
                             st.session_state.writing_answers,
-                            switches
+                            switches,
+                            grammar_score=grammar_score,
+                            grammar_total=grammar_total,
+                            listening_score=listening_score,
+                            listening_total=listening_total,
+                            reading_score=reading_score,
+                            reading_total=reading_total
                         )
                     
                     # Success message

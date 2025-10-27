@@ -3,7 +3,7 @@ import streamlit as st
 # WRITING SECTION - 10 POINTS TOTAL
 
 def show_writing():
-    st.markdown("### WRITING SECTION (15 points)")
+    st.markdown("### WRITING SECTION (17 points)")
     st.caption("Write a clear and organized composition.")
     
     # Initialize if not exists
@@ -23,7 +23,7 @@ def show_writing():
 2. **Structure (3 points)**: Clear organization with steps and explanation
 3. **Vocabulary (3 points)**: Use appropriate and varied vocabulary related to airport security
 4. **Content (3 points)**: Explain the process clearly and why it's important
-5. **Length (1 point)**: Write at least 80 words
+5. **Length (3 point)**: Write at least 80 words
     """)
     
     st.markdown("---")
@@ -60,18 +60,6 @@ def show_writing():
     
     st.markdown("")
     
-    # Grading rubric display
-    with st.expander("📊 **Grading Rubric - See how you will be graded**"):
-        st.markdown("""
-| **Aspect** | **Points** | **Criteria** |
-|------------|------------|--------------|
-| **Grammar** | 5 pts | Correct use of verb tenses, sentence structure, punctuation, and spelling |
-| **Structure** | 3 pts | Clear organization with introduction, body, and conclusion |
-| **Vocabulary** | 3 pts | Appropriate and varied vocabulary; correct word choice |
-| **Content** | 3 pts | Clear explanation of process and importance; complete information |
-| **Length** | 1 pt | Minimum 80 words |
-| **TOTAL** | **15 pts** | |
-        """)
     
     # Prepare formatted output for email
     writing_output = "WRITING SECTION (15 POINTS)\n"
@@ -86,7 +74,7 @@ def show_writing():
     writing_output += f"Recommended Minimum: 80 words\n"
     writing_output += f"Length Point: {'1 point (80+ words)' if word_count >= 80 else '0 points (less than 80 words)'}\n\n"
     writing_output += "="*60 + "\n"
-    writing_output += "GRADING RUBRIC (15 points total):\n"
+    writing_output += "GRADING RUBRIC (17 points total):\n"
     writing_output += "-"*60 + "\n"
     writing_output += "1. Grammar (5 pts): _____ / 5\n"
     writing_output += "   - Correct verb tenses, sentence structure, punctuation\n\n"
@@ -96,7 +84,7 @@ def show_writing():
     writing_output += "   - Appropriate and varied vocabulary\n\n"
     writing_output += "4. Content (3 pts): _____ / 3\n"
     writing_output += "   - Clear explanation of process and importance\n\n"
-    writing_output += f"5. Length (1 pt): {'_____ / 1' if word_count >= 80 else '0 / 1'}\n"
+    writing_output += f"5. Length (3 pt): {'_____ / 1' if word_count >= 80 else '0 / 1'}\n"
     writing_output += f"   - Minimum 80 words {'(MET)' if word_count >= 80 else '(NOT MET)'}\n\n"
     writing_output += "="*60 + "\n"
     writing_output += "TOTAL SCORE: _____ / 15 points\n\n"
