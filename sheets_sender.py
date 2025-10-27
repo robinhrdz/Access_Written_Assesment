@@ -16,7 +16,7 @@ def sanitize_sheet_name(name):
     name = name[:100]
     return name
 
-def enviar_a_sheets(nombre, email, clase, listening, grammar, reading, writing, switches):
+def enviar_a_sheets(nombre, email, clase, listening, grammar, reading, writing, switches, grammar_score=None, grammar_total=None):
     """
     Envía los resultados del assessment a Google Sheets
     Crea una nueva pestaña para cada estudiante
@@ -54,12 +54,10 @@ def enviar_a_sheets(nombre, email, clase, listening, grammar, reading, writing, 
             worksheet = spreadsheet.add_worksheet(title=sheet_name, rows=100, cols=10)
         
         # Formatear grammar score
-        grammar_score = ""
-        if 'grammar_score' in st.session_state:
-            score = st.session_state.grammar_score
-            total = st.session_state.grammar_total
-            percentage = (score/total*100) if total > 0 else 0
-            grammar_score = f"{score}/{total} ({percentage:.1f}%)"
+        grammar_score_text = ""
+        if grammar_score is not None and grammar_total is not None:
+            percentage = (grammar_score/grammar_total*100) if grammar_total > 0 else 0
+            grammar_score_text = f"TOTAL SCORE: {grammar_score}/{grammar_total} ({percentage:.1f}%)"
         
         # Crear el contenido de la pestaña con formato
         data = [
@@ -79,7 +77,7 @@ def enviar_a_sheets(nombre, email, clase, listening, grammar, reading, writing, 
             ["=" * 50],
             [grammar],
             [""],
-            ["Grammar Score:", grammar_score],
+            [grammar_score_text],
             [""],
             ["READING SECTION"],
             ["=" * 50],
@@ -114,6 +112,13 @@ def enviar_a_sheets(nombre, email, clase, listening, grammar, reading, writing, 
             'textFormat': {'bold': True},
             'backgroundColor': {'red': 0.85, 'green': 0.95, 'blue': 1}
         })
+        
+        # Formatear el score total de grammar (negrita y color de fondo)
+        worksheet.format('A17', {
+            'textFormat': {'bold': True, 'fontSize': 12},
+            'backgroundColor': {'red': 1, 'green': 1, 'blue': 0.8}
+        })
+        
         worksheet.format('A19', {
             'textFormat': {'bold': True},
             'backgroundColor': {'red': 0.85, 'green': 0.95, 'blue': 1}
